@@ -1,8 +1,8 @@
 require './handlers/ping.rb'
 require './handlers/helpers.rb'
-require './handlers/stars.rb'
 require './handlers/destroyer.rb'
 require './handlers/nerdbeer.rb'
+require './handlers/data.rb'
 
 Lita.configure do |config|
   # The name your robot will use.
@@ -10,8 +10,8 @@ Lita.configure do |config|
   config.robot.mention_name = "magic"
 
   #slack config
-  # config.robot.adapter = :slack
-  config.robot.adapter = :shell
+  config.robot.adapter = :slack
+  # config.robot.adapter = :shell
   config.robot.admins = ["URRLG4W82"]
 
   config.robot.locale = :en
@@ -21,6 +21,8 @@ Lita.configure do |config|
   # config.adapters.slack.parse = "full"
   # config.adapters.slack.unfurl_links = false
   # config.adapters.slack.unfurl_media = false
+
+  config.handlers.apod.apod_api_key = 'DEMO_KEY'
 
   #port 
   config.http.port = 1311

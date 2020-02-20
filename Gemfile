@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 gem "lita"
 gem "lita-slack"
+gem 'mysql2', '~> 0.5.2'
+gem "lita-apod"
 
 # Uncomment to use the HipChat adapter
 # gem "lita-hipchat"
